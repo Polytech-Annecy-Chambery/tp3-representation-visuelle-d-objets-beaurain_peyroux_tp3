@@ -16,9 +16,10 @@ import copy
 
 
 def Q1a():
-    pass
+   return Configuration()
+
     
-def Q1b_f():
+def Q1b():
     return Configuration({'screenPosition': -5, 'xAxisColor': [1, 1, 0]}). \
         setParameter('xAxisColor', [1, 1, 0]). \
         setParameter('yAxisCo lor', [0,1,1]). \
@@ -30,8 +31,7 @@ def Q2b():
             Section({'position': [1, 1, 0], 'width':7, 'height':2.6})
             ) 
 
-def Q2c():
-    # Ecriture en utilisant le chaînage
+def Q2c():#    # Ecriture en utilisant le chaînage
     return Configuration().add(
             Section({'position': [1, 1, 0], 'width':7, 'height':2.6, 'edges': True})
             )
