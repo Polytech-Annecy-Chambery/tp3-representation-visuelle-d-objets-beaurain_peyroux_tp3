@@ -52,14 +52,26 @@ class Section:
 
     # Defines the vertices and faces 
     def generate(self):
-        self.vertices = [ 
-                # Définir ici les sommets
-                ]
-        self.faces = [
-                # définir ici les faces
-                ]   
-
-    # Checks if the opening can be created for the object x
+            def generate(self):
+                self.vertices = [ 
+                        [0, 0, 0 ], 
+                        [0, 0, self.parameters['height']], 
+                        [self.parameters['width'], 0, self.parameters['height']],
+                        [self.parameters['width'], 0, 0],      
+                        [0,self.parameters["thinckness"], 0 ], 
+                        [0, self.parameters["thinckness"], self.parameters['height']], 
+                        [self.parameters['width'], self.parameters["thinckness"], self.parameters['height']],
+                        [self.parameters['width'], self.parameters["thinckness"], 0]
+                        ]
+                self.faces = [
+                        [0, 3, 2, 1],
+                        [2,6,7,3],
+                        [0,4,7,3],
+                        [0,1,5,4],
+                        [1,2,6,5],
+                        [5,6,7,4]
+                        ]   
+  # Checks if the opening can be created for the object x
     def canCreateOpening(self, x):
         # A compléter en remplaçant pass par votre code
         pass      
