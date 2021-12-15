@@ -70,7 +70,7 @@ class Opening:
         gl.glTranslate(self.parameters['position'][0],self.parameters['position'][1],self.parameters['position'][2])
         gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_FILL) # on trace les faces : GL_FILL
         for i in self.faces :
-            gl.glBegin(gl.GL_QUADS) # TracÃ© dâ€™un quadrilatÃ¨re
+            gl.glBegin(gl.GL_QUADS)
             gl.glColor3fv(self.parameters['color']) # Couleur gris moyen
             for j in i:
                 gl.glVertex3fv(self.vertices[j])
