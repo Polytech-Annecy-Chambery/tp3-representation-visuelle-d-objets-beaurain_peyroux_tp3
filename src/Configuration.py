@@ -75,7 +75,7 @@ class Configuration:
         gl.glMatrixMode(gl.GL_MODELVIEW)
         gl.glLoadIdentity()
         gl.glTranslatef(0.0,0.0, self.parameters['screenPosition']) 
-    #    gl.glRotatef(-90, 1, 0, 0)
+        gl.glRotatef(-90, 1, 0, 0)
         
         
     # Getter
@@ -135,6 +135,10 @@ class Configuration:
         # Draws the objects if any
         for x in self.objects:
             x.draw()
+            
+     
+        
+        
             
     # Processes the KEYDOWN event
     def processKeyDownEvent(self):
