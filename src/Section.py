@@ -118,8 +118,8 @@ class Section:
         gl.glRotate(self.parameters['orientation'],0,0,1)
         gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_LINE) # on trace les faces : GL_FILL
         for i in self.faces :
-            gl.glBegin(gl.GL_QUADS) # TracÃ© dâ€™un quadrilatÃ¨re
-            gl.glColor3fv([1,0,0]) # Couleur gris moyen
+            gl.glBegin(gl.GL_QUADS) 
+            gl.glColor3fv([1,0,0]) 
             for j in i:
                 gl.glVertex3fv(self.vertices[j])
             gl.glEnd()
@@ -135,9 +135,9 @@ class Section:
         gl.glPushMatrix()
         gl.glTranslate(self.parameters['position'][0],self.parameters['position'][1],self.parameters['position'][2])
         gl.glRotate(self.parameters['orientation'],0,0,1)
-        gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_FILL) # on trace les faces : GL_FILL
+        gl.glPolygonMode(gl.GL_FRONT_AND_BACK, gl.GL_FILL) 
         for i in self.faces :
-            gl.glBegin(gl.GL_QUADS) # TracÃ© dâ€™un quadrilatÃ¨re
+            gl.glBegin(gl.GL_QUADS)
             gl.glColor3fv(self.parameters['color']) # Couleur gris moyen
             for j in i:
                 gl.glVertex3fv(self.vertices[j])
